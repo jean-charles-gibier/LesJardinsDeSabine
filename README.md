@@ -1,2 +1,2 @@
 # LesJardinsDeSabine
-Site dynamique django basé sur lemodele bootstrap agency
+Site dynamique django basé sur le modele bootstrap agency
