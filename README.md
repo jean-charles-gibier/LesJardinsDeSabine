@@ -17,4 +17,8 @@ django-admin startproject LJDS
 
 # test du server
 python manage.py runserver
+
+#download boostrap project
+git clone git@github.com:StartBootstrap/startbootstrap-agency.git static
+
 ```
