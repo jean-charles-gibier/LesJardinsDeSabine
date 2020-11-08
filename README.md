@@ -21,4 +21,16 @@ python manage.py runserver
 #download boostrap project
 git clone git@github.com:StartBootstrap/startbootstrap-agency.git static
 
+mkdir LDJS/template
+
+Ajouter :
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]TEMPLATES = [
+    {
+    ...
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+    ...
+    }
+
 ```
