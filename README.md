@@ -46,3 +46,11 @@ STATICFILES_DIRS = [
 
 ```
 git clone  <this repo>
+	
+````
+~/LesJardinsDeSabine$ echo aa >  /var/log/uwsgi/LJDS.log
+~/LesJardinsDeSabine$ sudo chmod 777  /var/log/uwsgi/
+~/LesJardinsDeSabine$ echo aa >  /var/log/uwsgi/LJDS.log
+~/LesJardinsDeSabine$ uwsgi --ini uwsgi.ini
+````
+	
