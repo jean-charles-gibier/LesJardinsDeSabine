@@ -3,8 +3,13 @@ Site dynamique django basé sur le modele bootstrap agency
 
 ```
 python -m venv ./venv
+
 venv\Scripts\activate
-python -m pip install Django
+# OU
+source venv/bin/activate
+
+pip install -r requirements.txt
+# python -m pip install Django
 python
 	>>> import django
 	>>> print(django.get_version())
