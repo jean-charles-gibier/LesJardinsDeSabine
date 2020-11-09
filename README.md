@@ -27,6 +27,7 @@ python manage.py runserver
 git clone git@github.com:StartBootstrap/startbootstrap-agency.git static
 # modifier le fichier d'index et modifier les variables avec le commandes de template 
 mkdir LDJS/template
+sudo apt-get update && sudo apt-get install python3-pip
 
 Ajouter :
 STATICFILES_DIRS = [
