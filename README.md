@@ -20,7 +20,7 @@ python manage.py runserver
 
 #download boostrap project
 git clone git@github.com:StartBootstrap/startbootstrap-agency.git static
-
+# modifier le fichier d'index et modifier les variables avec le commandes de template 
 mkdir LDJS/template
 
 Ajouter :
@@ -34,3 +34,4 @@ STATICFILES_DIRS = [
     }
 
 ```
+git clone  <this repo>
