@@ -9,6 +9,11 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
+
+sudo apt-get update && sudo apt-get install python3-pip
+pip install uwsgi
+
+
 # python -m pip install Django
 python
 	>>> import django
@@ -20,6 +25,7 @@ python -m django --version
 3.1.3
 django-admin startproject LJDS
 
+
 # test du server
 python manage.py runserver
 
@@ -27,7 +33,6 @@ python manage.py runserver
 git clone git@github.com:StartBootstrap/startbootstrap-agency.git static
 # modifier le fichier d'index et modifier les variables avec le commandes de template 
 mkdir LDJS/template
-sudo apt-get update && sudo apt-get install python3-pip
 
 Ajouter :
 STATICFILES_DIRS = [
