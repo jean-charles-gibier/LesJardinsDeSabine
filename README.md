@@ -54,5 +54,7 @@ echo aa >  /var/log/uwsgi/LJDS.log
 uwsgi --ini uwsgi.ini
 sudo mkdir /var/www/dir
 sudo chmod 777  /var/www/dir
+
+ uwsgi --ini uwsgi.ini --socket /var/www/dir/uwsgi.sock
 ````
 	
