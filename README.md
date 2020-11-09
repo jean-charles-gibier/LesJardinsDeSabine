@@ -34,6 +34,8 @@ STATICFILES_DIRS = [
     }
 
 ```
- # pour generer rapidement le repertoire de cle (pour installer celle de Git)
+pour generer rapidement le repertoire de cle (pour installer celle de Git)
+```
  ssh-keygen
-# puis copier la clé publique générée par Github
+```
+puis copier la clé publique générée par Github
