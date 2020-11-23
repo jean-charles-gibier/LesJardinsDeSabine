@@ -57,4 +57,13 @@ sudo chmod 777  /var/www/dir
 
  uwsgi --ini uwsgi.ini --socket /var/www/dir/uwsgi.sock
 ````
-	
+Front adjustements 
+
+```
+cd LJDS/static
+# npm install if needed 
+npm run build 
+# => construit le dist
+npm start
+# => to observe recompilation results
+``` 
