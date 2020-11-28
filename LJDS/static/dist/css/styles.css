@@ -10418,7 +10418,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 @media (min-width: 768px) {
   .mytimeline:before {
-    left: 60%;
+    left: 50%;
     width: 85%;
   }
   .mytimeline > li {
