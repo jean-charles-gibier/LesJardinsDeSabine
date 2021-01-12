@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "15.237.146.152"]
 
+ADMINS=[('Jean-Charles', 'jeancharlesg@efree.fr'), ]
+
 # Application definition
 
 INSTALLED_APPS = [
