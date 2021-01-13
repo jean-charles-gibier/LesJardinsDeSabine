@@ -3,3 +3,6 @@ venv/*
 *.log
 *.pyc
 *.zip
+LJDS/db.sqlite3
+LJDS/dumps/
+LJDS/static/admin/
