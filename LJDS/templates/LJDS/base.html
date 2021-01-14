@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+{% load debugfilter %}
+
 {% load static %}
+
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
@@ -63,6 +66,18 @@
                     <li  class="mytimeline-inverted">
                         <div class="mytimeline-image"><img class="rounded-circle img-fluid" src="{% static 'dist/assets/img/team/sabine.jpg' %}" alt="" /></div>
                         <div class="mytimeline-panel" >
+
+                            {% if presentation %}
+
+                            <div class="mytimeline-heading">
+                                <br>
+                                <h4>{{ presentation.titre }}</h4>
+                                <h4 class="subheading">{{ presentation.intro }}</h4>
+                            </div>
+                            <div class="mytimeline-body">
+                                {{ presentation.content }}
+                            </div>
+                            {% else %}
                             <div class="mytimeline-heading">
                                 <br>
                                 <h4>Sabine,</h4>
@@ -90,6 +105,8 @@
                                     Je peux donc vous aider à donner vie à un projet de relooking de meuble, ou bien de votre cuisine, ou encore vous accompagner dans le choix des couleurs de vos pièces… sachant que le blanc n’étant pas une couleur est toujours en attente d’une autre couleur.
                                 </span>
                             </div>
+                            {% endif %}
+
                         </div>
                     </li>
                 </ul>
@@ -105,6 +122,20 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
+                            {% if comparaison1 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison1.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison1.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison1.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -115,10 +146,25 @@
                                 <div class="portfolio-caption-heading">Buffet</div>
                                 <div class="portfolio-caption-subheading text-muted">Illustration avant / après</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
+                            {% if comparaison2 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison2.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison2.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison2.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -129,10 +175,25 @@
                                 <div class="portfolio-caption-heading">Clotilde</div>
                                 <div class="portfolio-caption-subheading text-muted">Illustration avant / après</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
+                            {% if comparaison3 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison3.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison3.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison3.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -143,10 +204,25 @@
                                 <div class="portfolio-caption-heading">Tous en boîte !</div>
                                 <div class="portfolio-caption-subheading text-muted">Illustration avant / après</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                         <div class="portfolio-item">
+                            {% if comparaison4 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison4.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison4.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison4.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -157,10 +233,25 @@
                                 <div class="portfolio-caption-heading">Petit mobilier</div>
                                 <div class="portfolio-caption-subheading text-muted">Table de chevet</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                         <div class="portfolio-item">
+                            {% if comparaison5 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison5.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison5.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison5.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -171,10 +262,25 @@
                                 <div class="portfolio-caption-heading">Southwest</div>
                                 <div class="portfolio-caption-subheading text-muted">Website Design</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="portfolio-item">
+                            {% if comparaison6 %}
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                {% with comparaison6.photo_thumb as image_static %}
+                                 <img class="img-fluid" src="{{ image_static }}" alt="" />
+                                {% endwith %}
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ comparaison6.titre_thumb }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ comparaison6.intro_thumb }}</div>
+                            </div>
+                            {% else %}
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -185,6 +291,7 @@
                                 <div class="portfolio-caption-heading">Window</div>
                                 <div class="portfolio-caption-subheading text-muted">Photography</div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -269,7 +376,7 @@
                 </div>
             </div>
         </section>
-        <!-- Clients => myself advertising -->
+        <!-- Clients => myself advertising 
         <div class="py-5">
             <div class="container">
                 <div class="row">
@@ -288,6 +395,7 @@
                 </div>
             </div>
         </div>
+		-->
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -354,25 +462,37 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
+                                    {% if comparaison1 %}
+                                    <h2 class="text-uppercase">{{ comparaison1.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison1.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison1.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison1.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison1.photo_avant }}">
+                                     </div>
+                                    {% else %}
                                     <h2 class="text-uppercase">Buffet</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-<!--
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/portfolio/01-full.jpg' %}" alt="" />
--->
                                      <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:576px">
                                          <img class="_BA_afterElement" src="{% static 'dist/assets/img/realisations/comparisons/buffet_apres.png' %}">
                                          <img class="_BA_beforeElement" src="{% static 'dist/assets/img/realisations/comparisons/buffet_avant.png' %}">
                                      </div>
+                                    {% endif %}
 
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    {% if comparaison1 %}
+                                    <p>{{ comparaison1.redactionnel }}</p>
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
+                                        <li>Date: {{ comparaison1.date }}</li>
                                     </ul>
+                                    {% else %}
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p></p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2021</li>
+                                    </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
@@ -391,23 +511,37 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
+                                    {% if comparaison2 %}
+                                    <h2 class="text-uppercase">{{ comparaison2.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison2.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison2.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison2.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison2.photo_avant }}">
+                                     </div>
+                                    {% else %}
                                     <h2 class="text-uppercase">Clotilde</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-<!--                                    <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/portfolio/02-full.jpg' %}" alt="" /> -->
                                      <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:800px">
                                          <img class="_BA_afterElement" src="{% static 'dist/assets/img/realisations/comparisons/meuble_clotilde_apres.png' %}">
                                          <img class="_BA_beforeElement" src="{% static 'dist/assets/img/realisations/comparisons/meuble_clotilde_avant.png' %}">
                                      </div>
+                                    {% endif %}
 
+                                    {% if comparaison2 %}
+                                    <p>{{ comparaison2.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison2.date }}</li>
+                                    </ul>
+                                    {% else %}
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
+                                        <li>Date: January 2021</li>
                                     </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
@@ -426,22 +560,39 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
+                                    {% if comparaison3 %}
+                                    <h2 class="text-uppercase">{{ comparaison3.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison3.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison3.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison3.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison3.photo_avant }}">
+                                     </div>
+                                    {% else %}
                                     <h2 class="text-uppercase">Tous en boîte !</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <!-- <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/portfolio/03-full.jpg' %}" alt="" /> -->
                                      <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:700px">
                                          <img class="_BA_afterElement" src="{% static 'dist/assets/img/realisations/comparisons/box_apres.png' %}">
                                          <img class="_BA_beforeElement" src="{% static 'dist/assets/img/realisations/comparisons/box_avant.png' %}">
                                      </div>
+                                    {% endif %}
+
+                                    {% if comparaison3 %}
+                                    <p>{{ comparaison3.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison3.date }}</li>
+                                    </ul>
+                                    {% else %}
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Finish</li>
                                         <li>Category: Identity</li>
                                     </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
@@ -460,18 +611,37 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Twins</h2>
+                                    {% if comparaison4 %}
+                                    <h2 class="text-uppercase">{{ comparaison4.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison4.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison4.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison4.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison4.photo_avant }}">
+                                     </div>
+                                    {% else %}
+                                    <h2 class="text-uppercase">Buffet</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/realisations/book_ED_011.JPG' %}" alt="" />
+                                    {% endif %}
+
+
+                                    {% if comparaison4 %}
+                                    <p>{{ comparaison4.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison4.date }}</li>
+                                    </ul>
+                                    {% else %}
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Lines</li>
                                         <li>Category: Branding</li>
                                     </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
@@ -490,18 +660,36 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
+                                    {% if comparaison5 %}
+                                    <h2 class="text-uppercase">{{ comparaison5.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison5.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison5.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison5.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison5.photo_avant }}">
+                                     </div>
+                                    {% else %}
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/portfolio/05-full.jpg' %}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    {% endif %}
+
+                                    {% if comparaison5 %}
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Southwest</li>
                                         <li>Category: Website Design</li>
                                     </ul>
+                                    {% else %}
+                                    <p>{{ comparaison5.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison5.date }}</li>
+                                    </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
@@ -520,18 +708,36 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
+                                    {% if comparaison6 %}
+                                    <h2 class="text-uppercase">{{ comparaison6.titre }}</h2>
+                                    <p class="item-intro text-muted">{{ comparaison6.intro }}</p>
+                                     <div class="_BA_comparisonArea" data-showhandle="yes" data-initialslicepos="80" style="max-width:{{ comparaison6.photo_apres.width }}px">
+                                         <img class="_BA_afterElement" src="{{ comparaison6.photo_apres }}">
+                                         <img class="_BA_beforeElement" src="{{ comparaison6.photo_avant }}">
+                                     </div>
+                                    {% else %}
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="{% static 'dist/assets/img/portfolio/06-full.jpg' %}" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    {% endif %}
+
+                                    {% if comparaison6 %}
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Window</li>
                                         <li>Category: Photography</li>
                                     </ul>
+                                    {% else %}
+                                    <p>{{ comparaison6.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison6.date }}</li>
+                                    </ul>
+                                    {% endif %}
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Fermer la présentation
                                     </button>
                                 </div>
                             </div>
