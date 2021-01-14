@@ -73,7 +73,7 @@ class Site_ami(models.Model):
     sa_link_1_2 = models.TextField(max_length=400)
     sa_link_1_3 = models.TextField(max_length=400)
 
-    sa_photo_1 = models.ImageField(upload_to=path_media)
+    sa_photo_2 = models.ImageField(upload_to=path_media)
     sa_logo_2 = models.CharField(max_length=255)
     sa_titre_2 = models.CharField(max_length=255)
     sa_intro_2 = models.TextField(max_length=1200)
@@ -81,7 +81,7 @@ class Site_ami(models.Model):
     sa_link_2_2 = models.TextField(max_length=400)
     sa_link_2_3 = models.TextField(max_length=400)
 
-    sa_photo_1 = models.ImageField(upload_to=path_media)
+    sa_photo_3 = models.ImageField(upload_to=path_media)
     sa_logo_3 = models.CharField(max_length=255)
     sa_titre_3 = models.CharField(max_length=255)
     sa_intro_3 = models.TextField(max_length=1200)
