@@ -1,3 +1,21 @@
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+
 $(function () {
     $(
         "#contactForm input,#contactForm textarea,#contactForm button"
@@ -21,8 +39,11 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/contact_me",
+                url: "/website/contact_me",
                 type: "POST",
+                headers:{
+                     "X-CSRFToken": csrftoken
+                     },
                 data: {
                     name: name,
                     phone: phone,
@@ -39,7 +60,7 @@ $(function () {
                         )
                         .append("</button>");
                     $("#success > .alert-success").append(
-                        "<strong>Your message has been sent. </strong>"
+                        "<strong>Votre message a été envoyé. </strong>"
                     );
                     $("#success > .alert-success").append("</div>");
                     //clear all fields
@@ -55,7 +76,7 @@ $(function () {
                         .append("</button>");
                     $("#success > .alert-danger").append(
                         $("<strong>").text(
-                            "Sorry " +
+                            "Désolé " +
                                 firstName +
                                 ", il semblerait que le serveur de messagerie ne reponde pas. Veuillez essayer plus tard !"
                         )

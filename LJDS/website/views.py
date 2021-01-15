@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.core.mail import BadHeaderError, send_mail
 from website.models import Comparaison, Presentation, Evenement, Site_ami
- 
-import pprint
+from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.cache import never_cache
+from django.http import HttpResponse
+import os
 
 class GlobalLJDSView(TemplateView):
     template_path = 'LJDS/index.html'
@@ -52,3 +55,37 @@ class GlobalLJDSView(TemplateView):
             context['sites_amis'] = sites_amis
 
         return context
+
+@never_cache
+@csrf_protect
+def do_send_mail(request):
+    if request.method =='POST':
+#        pprint.pprint(request.POST)
+        email = request.POST['email']
+        message =  request.POST['message']
+        name =  request.POST['name']
+        phone = request.POST['phone']
+        destinataire =  os.environ.get('EMAIL_DESTINATAIRE')
+
+        send_mail(
+            'Contact envoyé depuis lescouleursdesabine.fr',
+            """
+Bonjour,
+Un visteur a rempli le formulaire de contact avec les informations suivantes :
+
+Email': {}
+Message': 
+ -------------------
+{}
+ -------------------
+Nom: {}
+Telephone: {}
+
+Bonne réception !
+Votre Serveur WEB.
+            """.format(email, message, name, phone),
+            'slescouleursdesabine@gmail.com',
+            [destinataire],
+            fail_silently=False,
+            )
+        return HttpResponse()
