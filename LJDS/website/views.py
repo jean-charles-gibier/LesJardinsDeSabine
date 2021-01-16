@@ -43,16 +43,12 @@ class GlobalLJDSView(TemplateView):
             context['presentation'] = presentation[0]
 
         evenements = Evenement.objects.all()
-        if len(evenements) > 5:
-            context['evenements'] = evenements[-6:]
-        else:
-            context['evenements'] = evenements
+        if len(evenements) > 0:
+            context['evenements'] = evenements[0]
 
         sites_amis = Site_ami.objects.all()
-        if len(sites_amis) > 2:
-            context['sites_amis'] = sites_amis[0:3]
-        else:
-            context['sites_amis'] = sites_amis
+        if len(sites_amis) > 0:
+            context['sites_amis'] = sites_amis[0]
 
         return context
 
