@@ -1,15 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740.00 40.00">
-  <text x="15.119048"
-  y="37.797619" 
-  fill="#ffcfa5" 
-  font-family="'Georgia'" 
-  font-size="50px" 
-  stroke-width=".26458" 
-  style="line-height:10.25" 
-  xml:space="preserve">
-  <tspan x="15.119048" 
-  y="37.797619" 
-  fill="#ffcfa5" 
-  font-size="50=px" 
-  stroke-width=".26458">Les couleurs de Sabine</tspan></text>
+<svg width="640" height="80" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="82" width="642" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text transform="matrix(1.21899, 0, 0, 1.5821, -3.31091, 4.81048)" id="svg_1" xml:space="preserve" stroke-width="0.26458" font-size="50px" font-family="'Georgia'" fill="#ffcfa5" y="37.79762" x="15.11905">
+   <tspan id="svg_2" stroke-width="0.26458" font-size="50=px" fill="#ffcfa5" y="37.79762" x="15.11905">Les couleurs de Sabine</tspan>
+  </text>
+ </g>
 </svg>

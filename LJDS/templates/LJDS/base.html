@@ -390,8 +390,13 @@
                             {% else %}
                                  <img class="mx-auto rounded-circle" src="{% static 'dist/assets/img/amis/2.png' %}" alt="" />
                             {% endif %}
-                            <a  class="stretched-link text-dark"  href="https://www.isapatch.fr/"><h4>Isapatch</h4></a>
-                            <p class="text-muted">Patchwork et arts textiles</p>
+                            <a  class="stretched-link text-dark"  href="https://www.isapatch.fr/">
+							<h4>
+							Isapatch
+							</h4></a>
+                            <p class="text-muted">
+							Patchwork et arts textiles
+							</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -406,8 +411,12 @@
                             {% else %}
                                  <img class="mx-auto rounded-circle" src="{% static 'dist/assets/img/amis/3.png' %}" alt="" />
                             {% endif %}
-                            <a  class="stretched-link text-dark"  href="http://ecoledescolibris.fr"><h4>École des colibris</h4></a>
-                            <p class="text-muted">Donner la joie d'apprendre en restant accessible.</p>
+                            <a  class="stretched-link text-dark"  href="http://ecoledescolibris.fr"><h4>
+							École des colibris
+							</h4></a>
+                            <p class="text-muted">
+							Donner la joie d'apprendre en restant accessible.
+							</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -415,7 +424,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+					</p></div>
                 </div>
             </div>
         </section>
@@ -718,15 +729,15 @@
                                     {% endif %}
 
                                     {% if comparaison5 %}
+                                    <p>{{ comparaison5.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison5.date }}</li>
+                                    </ul>
+                                    {% else %}
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Southwest</li>
                                         <li>Category: Website Design</li>
-                                    </ul>
-                                    {% else %}
-                                    <p>{{ comparaison5.redactionnel }}</p>
-                                    <ul class="list-inline">
-                                        <li>Date: {{ comparaison5.date }}</li>
                                     </ul>
                                     {% endif %}
 
@@ -766,15 +777,15 @@
                                     {% endif %}
 
                                     {% if comparaison6 %}
+                                    <p>{{ comparaison6.redactionnel }}</p>
+                                    <ul class="list-inline">
+                                        <li>Date: {{ comparaison6.date }}</li>
+                                    </ul>
+                                    {% else %}
                                     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Window</li>
                                         <li>Category: Photography</li>
-                                    </ul>
-                                    {% else %}
-                                    <p>{{ comparaison6.redactionnel }}</p>
-                                    <ul class="list-inline">
-                                        <li>Date: {{ comparaison6.date }}</li>
                                     </ul>
                                     {% endif %}
 
