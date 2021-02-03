@@ -61,7 +61,7 @@ def do_send_mail(request):
         message =  request.POST['message']
         name =  request.POST['name']
         phone = request.POST['phone']
-        destinataire =  os.environ.get('EMAIL_DESTINATAIRE')
+        destinataire = os.environ.get('EMAIL_DESTINATAIRE')
 
         send_mail(
             'Contact envoyé depuis lescouleursdesabine.fr',
