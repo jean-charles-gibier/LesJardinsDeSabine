@@ -8,7 +8,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="author" content="Gibier Jean-Charles" />
+        <meta name="keywords" content="peinture, decoration, décoration, decoratrice, décoratrice, renovation, rénovation, vernis, a-plat, meubles, decoratif, decorative, décoratif, décorative, ameublement">
         <title>Les couleurs de Sabine</title>
         <link rel="icon" type="image/x-icon" href="{% static 'dist/assets/img/favicon.ico' %}" />
         <!-- Font Awesome icons (free version)-->
@@ -75,7 +76,7 @@
                                 <h4 class="subheading">{{ presentation.intro }}</h4>
                             </div>
                             <div class="mytimeline-body">
-                                {{ presentation.content }}
+                                {{ presentation.content | safe }}
                             </div>
                             {% else %}
                             <div class="mytimeline-heading">
