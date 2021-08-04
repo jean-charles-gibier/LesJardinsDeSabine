@@ -5,4 +5,12 @@ venv/*
 *.zip
 LJDS/db.sqlite3
 LJDS/dumps/
-LJDS/static/admin/
+LJDS/static/*
+LJDS/website/migrations/*
+.idea/*
+bash_history.txt
+dezip/*
+dns-records.csv
+history.txt
+page de garde du site.xcf
+test_mail.py
